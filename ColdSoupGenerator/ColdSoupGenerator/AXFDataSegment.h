@@ -1,8 +1,16 @@
 #pragma once
+#include <string>
+#include <vector>
+#include <fstream>
+
 class AXFDataSegment
 {
 public:
 	AXFDataSegment();
 	~AXFDataSegment();
+	void Load(std::ifstream &,int,int);
+	std::string *GetStr(int index);
+private:
+	std::vector<char> *data;
 };
 
