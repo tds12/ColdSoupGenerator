@@ -16,7 +16,7 @@ IntermediateCode::~IntermediateCode()
 {
 }
 
-IntermediateCode *IntermediateCode::Load(std::ifstream &axfile, int index, int size)
+IntermediateCode *IntermediateCode::Load(std::ifstream &axfile, size_t index, size_t size)
 {
 	short ex;
 	short code16;

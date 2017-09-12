@@ -4,7 +4,7 @@ class IntermediateCode
 public:
 	IntermediateCode();
 	~IntermediateCode();
-	IntermediateCode *Load(std::ifstream &, int, int);
+	IntermediateCode *Load(std::ifstream &, size_t, size_t);
 	IntermediateCode *next();
 private:
 	bool ex1;

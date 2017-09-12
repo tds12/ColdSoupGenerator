@@ -14,7 +14,7 @@ AXFDataSegment::~AXFDataSegment()
 {
 }
 
-void AXFDataSegment::Load(std::ifstream &axfile, int index, int size)
+void AXFDataSegment::Load(std::ifstream &axfile, size_t index, size_t size)
 {
 	axfile.seekg(index);
 	{

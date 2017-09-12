@@ -13,7 +13,7 @@ AXFCodeSegment::~AXFCodeSegment()
 {
 }
 
-void AXFCodeSegment::Load(std::ifstream &axfile, int index, int size)
+void AXFCodeSegment::Load(std::ifstream &axfile, size_t index, size_t size)
 {
 	axfile.seekg(index);
 	{

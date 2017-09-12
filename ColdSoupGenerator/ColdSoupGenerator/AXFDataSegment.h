@@ -8,7 +8,7 @@ class AXFDataSegment
 public:
 	AXFDataSegment();
 	~AXFDataSegment();
-	void Load(std::ifstream &,int,int);
+	void Load(std::ifstream &,size_t,size_t);
 	std::string *GetStr(int index);
 	double GetDouble(int index);
 private:

@@ -6,7 +6,7 @@ class AXFCodeSegment
 public:
 	AXFCodeSegment();
 	~AXFCodeSegment();
-	void Load(std::ifstream &, int, int);
+	void Load(std::ifstream &, size_t, size_t);
 private:
 	IntermediateCode *intermediateCode;
 };
