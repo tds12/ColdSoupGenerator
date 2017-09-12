@@ -142,12 +142,14 @@
     <ClCompile Include="AXFCodeSegment.cpp" />
     <ClCompile Include="AXFDataSegment.cpp" />
     <ClCompile Include="AXFile.cpp" />
+    <ClCompile Include="IntermediateCode.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AXFCodeSegment.h" />
     <ClInclude Include="AXFDataSegment.h" />
     <ClInclude Include="AXFile.h" />
+    <ClInclude Include="IntermediateCode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
