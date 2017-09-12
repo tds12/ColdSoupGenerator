@@ -10,6 +10,7 @@ public:
 	~AXFDataSegment();
 	void Load(std::ifstream &,int,int);
 	std::string *GetStr(int index);
+	double GetDouble(int index);
 private:
 	std::vector<char> *data;
 };

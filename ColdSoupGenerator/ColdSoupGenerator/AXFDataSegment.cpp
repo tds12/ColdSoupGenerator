@@ -29,3 +29,8 @@ std::string *AXFDataSegment::GetStr(int index)
 	*result = std::string(data->data() + index);
 	return result;
 }
+
+double AXFDataSegment::GetDouble(int index)
+{
+	return *(double*)(data->data() + index);
+}
