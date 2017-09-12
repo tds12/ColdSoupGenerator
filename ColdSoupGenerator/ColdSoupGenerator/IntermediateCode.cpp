@@ -2,9 +2,10 @@
 
 #include "IntermediateCode.h"
 
-const short EXFLG_0 = 0x1000;
-const short EXFLG_1 = 0x2000;
-const short EXFLG_2 = 0x4000;
+const unsigned short EXFLG_0 = 0x1000;
+const unsigned short EXFLG_1 = 0x2000;
+const unsigned short EXFLG_2 = 0x4000;
+const unsigned short EXFLG_BIT15 = 0x8000;
 const short CSTYPE = 0xfff;
 const short TYPE_CMPCMD = 11;
 
@@ -18,14 +19,14 @@ IntermediateCode::~IntermediateCode()
 
 IntermediateCode *IntermediateCode::Load(std::ifstream &axfile, size_t index, size_t size)
 {
-	short ex;
-	short code16;
+	unsigned short ex;
+	unsigned short code16;
 	if (static_cast<size_t>(axfile.tellg()) + sizeof(ex) + sizeof(code16) <= size) {
 		nextCode = nullptr;
 		return nullptr;
 	}
 	axfile.read((char*)&ex, sizeof(ex));
-		if (ex & 0x8000) {
+		if (ex & EXFLG_BIT15) {
 			if (static_cast<size_t>(axfile.tellg()) + sizeof(code) <= size) {
 			nextCode = nullptr;
 			return nullptr;

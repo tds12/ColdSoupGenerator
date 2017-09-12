@@ -20,7 +20,7 @@ void AXFCodeSegment::Load(std::ifstream &axfile, size_t index, size_t size)
 		intermediateCode = new IntermediateCode();
 		IntermediateCode *currentCode = intermediateCode;
 		do {
-			currentCode = currentCode->Load(axfile,static_cast<int>(axfile.tellg()),size);
+			currentCode = currentCode->Load(axfile,static_cast<size_t>(axfile.tellg()),size);
 		} while (currentCode);
 	}
 }

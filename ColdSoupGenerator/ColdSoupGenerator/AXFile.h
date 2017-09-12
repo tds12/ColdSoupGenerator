@@ -14,11 +14,11 @@ private:
 	const unsigned int headersize;
 	const char magic[4];
 	int version;
-	int max_val;
-	int allsize;
+	unsigned int max_val;
+	unsigned int allsize;
 	typedef struct Segment {
-		int pointer;
-		int size;
+		unsigned int pointer;
+		unsigned int size;
 	} Segment;
 	enum class SegmentIndex {
 		CodeSegmentIndex = 0,
@@ -33,9 +33,9 @@ private:
 	};
 	Segment Segments[(int)(SegmentIndex::SegmentMax)];
 	Segment SegmentHPIDAT;
-	short max_varhpi;
-	int bootoption;
-	int pointer_runtime;
+	unsigned short max_varhpi;
+	unsigned int bootoption;
+	unsigned int pointer_runtime;
 	AXFCodeSegment *CodeSegment;
 	AXFDataSegment *DataSegment;
 };

@@ -23,14 +23,14 @@ void AXFDataSegment::Load(std::ifstream &axfile, size_t index, size_t size)
 	}
 }
 
-std::string *AXFDataSegment::GetStr(int index)
+std::string *AXFDataSegment::GetStr(size_t index)
 {
 	std::string *result = nullptr;
 	*result = std::string(data->data() + index);
 	return result;
 }
 
-double AXFDataSegment::GetDouble(int index)
+double AXFDataSegment::GetDouble(size_t index)
 {
 	return *(double*)(data->data() + index);
 }
