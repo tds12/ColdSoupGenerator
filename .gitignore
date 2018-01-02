@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+/ColdSoupGenerator/Debug
+/ColdSoupGenerator/x64/Debug
+/ColdSoupGenerator/ColdSoupGenerator.VC.VC.opendb
+/ColdSoupGenerator/ColdSoupGenerator.VC.db
+/ColdSoupGenerator/.vs/ColdSoupGenerator/v15
+/ColdSoupGenerator/ColdSoupGenerator/Debug
+/ColdSoupGenerator/ColdSoupGenerator/x64/Debug
+/ColdSoupGenerator/.vs/ColdSoupGenerator/v14/.suo
